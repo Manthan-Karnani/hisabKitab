@@ -1,0 +1,13 @@
+# Build output — Render rebuilds this from source, never commit it
+target/
+*.class
+*.jar
+
+# macOS / IDE junk
+.DS_Store
+.idea/
+*.iml
+.vscode/
+
+# Local env overrides (keep secrets out of GitHub)
+.env
