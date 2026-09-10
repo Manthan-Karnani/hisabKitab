@@ -1,0 +1,17 @@
+# Render Blueprint — creates the Hisab Kitab web service from this repo.
+# NOTE: Render has no managed MySQL, so create a free MySQL first (e.g. Aiven.io)
+# and paste its values into the dashboard when prompted (sync: false vars below).
+services:
+  - type: web
+    name: hisab-kitab
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        sync: false # e.g. jdbc:mysql://<host>:<port>/hisabkitab?useSSL=true&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false # e.g. avnadmin (Aiven) — NOT root
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hisab Kitab — Login / Register</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo">₹</div>
+      <div>
+        <h1>HISAB KITAB</h1>
+        <small>Bahi-khata for the modern wallet — har rupaye ka hisab</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="auth-wrap">
+      <div class="card auth-card">
+        <div class="auth-head">
+          <div class="big">₹</div>
+          <h2 style="margin:6px 0">Hisab Kitab</h2>
+          <div style="opacity:.9;font-size:14px">Login or open a new khata to continue</div>
+        </div>
+        <div class="auth-body">
+          <div class="tabs">
+            <button id="tabLogin" class="active" type="button">Login</button>
+            <button id="tabRegister" class="ghost" type="button">Register</button>
+          </div>
+          <div id="err" class="error"></div>
+          <label>Username</label>
+          <input id="username" placeholder="e.g. manthan" autocomplete="username" />
+          <label>Password</label>
+          <input id="password" type="password" placeholder="••••••••" autocomplete="current-password" />
+          <div style="height:14px"></div>
+          <button id="submitBtn" style="width:100%">Login</button>
+          <p style="color:var(--muted);font-size:13px;text-align:center">No OTP — just username &amp; password.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div>&copy; 2026 <strong>Hisab Kitab</strong> | All rights reserved</div>
+    <div>Made by <strong>Manthan, Rahul and Aarush</strong></div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
